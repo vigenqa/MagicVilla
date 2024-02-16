@@ -11,7 +11,7 @@ namespace MagicVilla_VillaAPI.Controllers
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
-        
+
         private readonly ApplicationDbContext _db;
 
         public VillaAPIController(ApplicationDbContext db)
@@ -22,7 +22,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<VillaDto>> GetVillas()
         {
-            
+
             return Ok(_db.Villas.ToList());
         }
 
@@ -34,7 +34,7 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             if (id == 0)
             {
-                
+
                 return BadRequest();
             }
             var villa = _db.Villas.FirstOrDefault(u => u.Id == id);
@@ -73,7 +73,7 @@ namespace MagicVilla_VillaAPI.Controllers
             };
             _db.Villas.Add(model);
             _db.SaveChanges();
-           
+
 
             return CreatedAtRoute("GetVilla", new { id = villaDTO.Id }, villaDTO);
         }
@@ -112,7 +112,7 @@ namespace MagicVilla_VillaAPI.Controllers
             //villa.Sqft = villaDto.Sqft;
             //villa.Occupancy = villaDto.Occupancy;
 
-            Villa model = new ()
+            Villa model = new()
             {
                 Amenity = villaDto.Amenity,
                 Details = villaDto.Details,
