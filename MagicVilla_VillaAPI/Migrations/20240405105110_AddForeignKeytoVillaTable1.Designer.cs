@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240405105110_AddForeignKeytoVillaTable1")]
+    partial class AddForeignKeytoVillaTable1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,7 +73,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreeatedDate = new DateTime(2024, 4, 5, 15, 26, 39, 215, DateTimeKind.Local).AddTicks(4910),
+                            CreeatedDate = new DateTime(2024, 4, 5, 14, 51, 10, 868, DateTimeKind.Local).AddTicks(4365),
                             Details = "Villa Details",
                             ImageURL = "https://i.pinimg.com/736x/c9/63/7a/c9637a6a3716d65de5b91c38fbbd3f89.jpg",
                             Name = "Rayal Villa",
@@ -83,7 +86,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "Private pool, beach access, BBQ area",
-                            CreeatedDate = new DateTime(2024, 4, 5, 15, 26, 39, 215, DateTimeKind.Local).AddTicks(4926),
+                            CreeatedDate = new DateTime(2024, 4, 5, 14, 51, 10, 868, DateTimeKind.Local).AddTicks(4382),
                             Details = "Luxury beachfront villa with stunning ocean views",
                             ImageURL = "https://www.beachhousenassau.com/wp-content/uploads/2018/10/Beach_House_Nassau_Ocean_View_Room1.jpg",
                             Name = "Ocean View Paradise",
@@ -96,7 +99,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "Fireplace, hiking trails nearby, scenic views",
-                            CreeatedDate = new DateTime(2024, 4, 5, 15, 26, 39, 215, DateTimeKind.Local).AddTicks(4927),
+                            CreeatedDate = new DateTime(2024, 4, 5, 14, 51, 10, 868, DateTimeKind.Local).AddTicks(4383),
                             Details = "Cozy cabin nestled in the mountains, perfect for nature lovers",
                             ImageURL = "https://www.cabinsusa.com/uploads/images/units/828/828_1438040497_7935.jpg",
                             Name = "Mountain Retreat Cabin",
@@ -109,7 +112,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "Rooftop terrace, modern furnishings, city skyline views",
-                            CreeatedDate = new DateTime(2024, 4, 5, 15, 26, 39, 215, DateTimeKind.Local).AddTicks(4929),
+                            CreeatedDate = new DateTime(2024, 4, 5, 14, 51, 10, 868, DateTimeKind.Local).AddTicks(4385),
                             Details = "Chic loft apartment in the heart of the city",
                             ImageURL = "https://www.apartments.com/images/default-source/default-album/hero-photos/primary-hero-images/apartment-exterior-02-003.jpg?sfvrsn=f7bbd086_0",
                             Name = "Urban Loft",
@@ -122,7 +125,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "Wrap-around porch, garden, farm-to-table dining",
-                            CreeatedDate = new DateTime(2024, 4, 5, 15, 26, 39, 215, DateTimeKind.Local).AddTicks(4931),
+                            CreeatedDate = new DateTime(2024, 4, 5, 14, 51, 10, 868, DateTimeKind.Local).AddTicks(4387),
                             Details = "Quaint farmhouse surrounded by rolling hills and fields",
                             ImageURL = "https://media.istockphoto.com/photos/old-rustic-farmhouse-picture-id157708876?k=20&m=157708876&s=612x612&w=0&h=iW5YlBeuE0rM40voaLtwQh-QBebZZD3igDn7AATi6Wg=",
                             Name = "Rustic Farmhouse",
